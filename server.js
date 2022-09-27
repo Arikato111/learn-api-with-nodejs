@@ -137,7 +137,7 @@ app.delete("/delete/:email", (req, res) => {
   }
 });
 
-const port = 3000;
+const port = process.env['PORT'] ?? 4000;
 app.listen(port, () => {
   console.log("run at port:", port);
 });
